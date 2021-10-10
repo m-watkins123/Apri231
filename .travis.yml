@@ -6,9 +6,6 @@ ame: "Python 3.9.6 on Windows"
         - python --version
         - python -m pip install --upgrade codecov pytest
       env: PATH=/c/Python39:/c/Python39/Scripts:$PATH
-before_install:
-  - python --version
-  - python3 -m pip install --upgrade codecov pytest
 install:
   - pip install ".[test]"
 script: pytest
