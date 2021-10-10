@@ -4,12 +4,10 @@ ame: "Python 3.9.6 on Windows"
       before_install:
         - choco install python --version 3.9.2
         - python --version
-        - python -m pip install --upgrade pip
         - python -m pip install --upgrade codecov pytest
       env: PATH=/c/Python39:/c/Python39/Scripts:$PATH
 before_install:
   - python --version
-  - python3 -m pip install --upgrade pip
   - python3 -m pip install --upgrade codecov pytest
 install:
   - pip install ".[test]"
