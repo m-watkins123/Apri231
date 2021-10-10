@@ -1,11 +1,10 @@
-language: python
-python:
-  - "3.5"
-  - "3.6"
-  - "nightly" # currently points to 3.7-dev
-before_install:
-    - pip install pytest pytest-cov
-# command to install dependencies
-install: "pip install -r requirements.txt"
-# command to run tests
-script: pytest
+[pytest]
+testpaths =
+    tests
+    skift
+norecursedirs=dist build .tox scripts
+addopts =
+    --doctest-modules
+    --cov=skift
+    -r a
+    -v
